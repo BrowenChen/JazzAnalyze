@@ -24,3 +24,10 @@ Generates a random sequence of chord changes for etude or arppeggio exercises.
 
 Contains a queue to hold a list of standards or artists to transcribe and learn ranking by difficulty. Used to organize
 practice time efficiently. 
+
+
+
+To-dos
+
+implement calendar d3 tracking so you can track your progress like github commits
+
