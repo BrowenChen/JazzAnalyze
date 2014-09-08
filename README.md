@@ -31,3 +31,5 @@ To-dos
 
 implement calendar d3 tracking so you can track your progress like github commits
 
+-Strava like functionality to create social environment for tracking
+
