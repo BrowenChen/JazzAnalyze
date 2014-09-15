@@ -3,10 +3,12 @@
 
 
 body {
-  margin-top: 60px;
-  padding: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
   background-color: #ECF0F1;
 }
+
 
 
 .menu {
@@ -65,4 +67,38 @@ h1{
 .tick
 {
   stroke-dasharray: 1, 2;
+}
+
+
+/* hello */
+#hello {
+  width: 100%;
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
+
+#hello h1 {
+  font-size: 90px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #74cfae;
+}
+
+#hello h2 {
+  color: #c0c0c0;
+  font-weight: 400;
+}
+
+/* Footer */
+#f {
+  height: 145px;
+  padding-top: 20px;
+  background-color: black;
+
+}
+
+#f p, h1{
+  color: silver;
+  
+  font-weight: 400;
 }
