@@ -17,7 +17,11 @@ config(function ($routeProvider, $locationProvider) {
     }).
     when('/view2', {
       templateUrl: 'partials/partial2',
-      controller: 'MyCtrl2'
+      controller: 'MyCtrl1'
+    }).
+    when('/view3', {
+      templateUrl: 'partials/partial3',
+      controller: 'MyCtrl1'
     }).
     otherwise({
       redirectTo: '/view1'
