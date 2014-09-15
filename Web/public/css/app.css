@@ -75,6 +75,7 @@ h1{
   width: 100%;
   padding-top: 250px;
   padding-bottom: 250px;
+
 }
 
 #hello h1 {
@@ -87,6 +88,14 @@ h1{
 #hello h2 {
   color: #c0c0c0;
   font-weight: 400;
+}
+
+#hello h3 {
+  font-size: 2.3em;
+}
+
+#hello p{
+   font-size: 1.5em;
 }
 
 /* Footer */
@@ -108,4 +117,10 @@ h1{
 #generator h3 {
   font-size: 1.5em;
   color: #3A539B;
+}
+
+
+
+#services p {
+  font-size: 1.3em;
 }
