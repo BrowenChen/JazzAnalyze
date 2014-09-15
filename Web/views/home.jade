@@ -1,0 +1,285 @@
+!!!
+html(ng-app="myApp", ng-controller='MyCtrl1')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title JazzHub
+		link(href='lib/bootstrap-css/css/bootstrap.css', rel='stylesheet')
+		link(href='lib/jquery-ui/themes/smoothness/jquery-ui.css', rel='stylesheet')
+		link(href='/css/style.css', rel='stylesheet')
+		link(href='/css/app.css', rel='stylesheet')
+
+		link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+		script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+
+
+
+
+		link(href='/css/fancybox.css')
+		link(href='/css/font-awesome-ie7.css')
+		link(href='/css/icons-color.css')
+		link(href='/css/slider2.css')
+		link(href='/css/slider3.css')
+		link(href='/css/slider1.css')
+		link(href='/css/icons.css')
+		link(href='/css/social-icons.css')
+			
+	body
+
+
+		img(src='img/chordly.jpg', style="width: 100%; height: 100%;")
+
+
+
+
+		.container
+		
+			.row-fluid
+		
+				.navigation
+					.navbar.navbar-fixed-top
+						.navbar-inner
+							//- a.btn.btn-navbar.btnOverlay(data-toggle='collapse', data-target='.nav-collapse')
+							//-	| menu
+							.nav
+								ul.nav
+									li
+										a.home(href='/home') Home
+									li
+										a.services(href='/view1') Generator
+									li
+										a.pricing(href='#') Description
+									li
+										a.portfolio(href='#') Practice Resources
+									li
+										a.about(href='#') About Us
+									li
+										a.contact(href='#') Contact
+		//- .row
+		//-	nav.navbar.navbar-inverse(role='navigation', style="background-color: #2C3E50; height: 100px; margin: 0 auto;")
+		//-		.container(style="text-align:center;")
+
+
+		//-			h1(style="color: silver; font-size: 2em;") Chordinate
+		//-			p(style="color: silver; font-size: 1.25em;") Jazz Practice Generator
+		//-			.navbar-header
+		//-				button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+		//-					span.sr-only Toggle navigation
+		//-					span.icon-bar
+		//-					span.icon-bar
+		//-					span.icon-bar		
+		//-			.collapse.navbar-collapse.navbar-ex1-collapse
+		//-				ul.nav.navbar-nav		
+		
+	
+
+		#services.color.black
+			.container
+				.wrapper.col-sm-12
+					#page-title
+						#page-title-inner
+							h2 
+								span Our Mission
+					.row
+						.col-sm-12
+							p	Jazz is a difficult language to master. Improvisation over changes requires a steep learning curve to master the fundamentals of jazz harmonic analysis and engraining the sounds in your head takes months or years of frustration before it becomes second nature. 
+							p
+								| As passionate musicians ourselves, we understand the long process of acquiring this esoteric language and hope to create an efficient methodology and practice resource to speed up this process as much as possible. 
+					.row
+						.col-sm-6
+							p Navigating through simple jazz tunes require a mix of theory, knowledge of how to apply your modes and chords, quick thinking, and an intuitive sense of jazz phrasing that comes through listening to the language. Each chord change in a tune brings about certain “target" chord tones that fit with that particular measure as well as notes to avoid, so simply playing licks in a single key throughout a tune most likely clash with the rest of the band. Knowing how to spot a chord, hear it in your head, and know how to target these key tones for each chord is essential to producing natural lines that sound like jazz. The beauty of it all is that this process becomes entirely subconscious for those who have reached a level of mastery through years dedicated and focused practice. Much like the process of riding a bike, your brain will create mental heuristics that will allow you to internalize each chord and free you from thinking during jazz improvisation, allowing greater expression and manipulation of the music to your own voice. 
+						.col-sm-6
+							p The core foundations every jazz musician must go through are these three simple steps. Know how to identify a chord and it’s relative mode, be able to arpeggiate the scale, and transpose licks to all of the keys. Jazz is a numbers game. By thinking in intervals, we free ourselves from thinking in specific chord tones per key and we can begin to think in terms of numbers for each key. A lick that targets the 3rd, 5th, 9th, and resolves on the 7th is much easier to transpose to a different key because of this abstraction. That is why we aim to focus our attention and practice towards taking different phrases and applying them into different scenarios to truly internalize each chord sound. 
+
+
+
+
+		#hello(style="background-color: #DADFE1;")
+			.row
+				.col-sm-4
+					.icons-box
+						i.fa-icon-beaker
+						h3 Targeted Pratice 
+						p We focus on the essentials that every jazz musician must do in order to be able to freely express themselves on their instruments. Yes this may be the most laborious part, but having a strong foundation is the key to any success.
+				.col-sm-4
+					.icons-box
+						i.fa-icon-thumbs-up
+						h3 CrossPlatform
+						p | Alongside the web app, we have an android platform that delivers the same core features for musicians. iOS is in the works in the future.
+				.col-sm-4
+					.icons-box
+						i.fa-icon-heart-empty
+						h3 Personalized Progress
+						p Progress tracking and focusing on your weak points will maximize productivity in the woodshed and take out the random noodling most people do for "practice". (I'm a perfect example of this). Adaptive learning algorithms will speed up the process and allow you to quantify your improvisation practice.
+
+
+
+		#team.color.white
+			.container
+				.wrapper.col-sm-12
+					#page-title
+						#page-title-inner
+							h2
+								span The team
+					.row
+						.col-sm-12
+							#team
+								.row
+									.col-sm-6
+										.avatar
+											img.img-circle(src='', alt='team member')
+										.team-name Owen Chen
+										.position NodeJs/AngularJs WebApp
+										p
+											| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+										.social_profiles
+										ul.social-bookmarks
+											li.facebook
+												a(href='') facebook
+											li.flickr
+												a(href='') flickr
+											li.linkedin
+												a(href='#') linkedin
+											li.twitter
+												a(href='#') twitter										
+									.col-sm-6
+										.avatar
+											img.img-circle(src='', alt='team member')
+										.team-name Jessie Salas
+										.position Mobile, Designer
+										p
+											| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+										.social_profiles
+										ul.social-bookmarks
+											li.facebook
+												a(href='') facebook
+											li.flickr
+												a(href='') flickr
+											li.linkedin
+												a(href='#') linkedin
+											li.twitter
+												a(href='#') twitter										
+
+
+		#f
+			.col-sm-3
+				p 
+			.col-sm-6
+				h1 Chordinate
+
+				p We are two Computer Science and Cognitive Science students who are madly obsessed with Jazz.
+
+
+			.col-sm-3
+				p 
+
+
+	script(src='/js/lib/angular/angular.js')
+	script(src='/js/app.js')
+	script(src='/js/slider.js')    
+	script(src='/js/services.js')
+	script(src='/js/controllers.js')
+	script(src='/js/filters.js')
+	script(src='/js/directives.js')
+
+
+	script(src='lib/jquery/dist/jquery.js')
+	script(src='lib/jquery-ui/ui/jquery-ui.js')
+	script(src='lib/lodash/dist/lodash.js')
+	script(src='lib/angular/angular.js')
+	script(src='lib/angular-resource/angular-resource.js')
+	script(src='lib/angular-route/angular-route.js')
+	script(src='lib/angular-bootstrap/ui-bootstrap-tpls.js')
+	script(src='lib/angular-ui-date/src/date.js')	
+
+
+
+
+	//- essentia javascript
+
+	script(type='text/javascript', src='js/isotope.js')
+	script(type='text/javascript', src='js/jquery.imagesloaded.js')
+	script(type='text/javascript', src='js/bootstrap.min.js')
+	script(type='text/javascript', src='js/flexslider.js')
+	script(type='text/javascript', src='js/carousel.js')
+	script(type='text/javascript', src='js/fancybox.js')
+	script(type='text/javascript', src='js/twitter.js')
+	script(type='text/javascript', src='js/modernizr.custom.79639.js')
+	script(type='text/javascript', src='js/jquery.ba-cond.min.js')
+	script(type='text/javascript', src='js/jquery.slitslider.js')
+	script(type='text/javascript', src='js/excanvas.js')
+	script(type='text/javascript', src='js/jquery.flot.min.js')
+	script(type='text/javascript', src='js/jquery.flot.pie.min.js')
+	script(type='text/javascript', src='js/jquery.flot.stack.js')
+	script(type='text/javascript', src='js/jquery.flot.resize.min.js')
+
+	script.
+		$(function() {
+
+		var Page = (function() {
+
+		var $navArrows = $( '#nav-arrows' ),
+		$nav = $( '#nav-dots > span' ),
+		slitslider = $( '#slider' ).slitslider( {
+		onBeforeChange : function( slide, pos ) {
+
+		$nav.removeClass( 'nav-dot-current' );
+		$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+		}
+		} ),
+
+		init = function() {
+
+		initEvents();
+
+		},
+		initEvents = function() {
+
+		// add navigation events
+		$navArrows.children( ':last' ).on( 'click', function() {
+
+		slitslider.next();
+		return false;
+
+		} );
+
+		$navArrows.children( ':first' ).on( 'click', function() {
+
+		slitslider.previous();
+		return false;
+
+		} );
+
+		$nav.each( function( i ) {
+
+		$( this ).on( 'click', function( event ) {
+			
+			var $dot = $( this );
+			
+			if( !slitslider.isActive() ) {
+
+				$nav.removeClass( 'nav-dot-current' );
+				$dot.addClass( 'nav-dot-current' );
+			
+			}
+			
+			slitslider.jump( i + 1 );
+			return false;
+
+		} );
+
+		} );
+
+		};
+
+		return { init : init };
+
+		})();
+
+		Page.init();
+
+		});
+
+	
