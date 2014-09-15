@@ -1,4 +1,11 @@
-p This is the partial for view 2.
-p
-  | Showing of 'interpolate' filter:
-  | {{ 'Current version is v%VERSION%.' | interpolate }}
+.well(style="height: 250px; background-color: white;")
+
+
+	h2 Chord Progression
+
+	br
+
+	{{chordProgression}}
+
+a.button.btn.btn-default(href='/view1', ng-click="generateChordType()") Generate
+

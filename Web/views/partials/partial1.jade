@@ -1,19 +1,18 @@
 
-.jumbotron(style="width: 75%; text-align: center; margin: 0 auto; border-radius: 20px;")
-	h1 Bucket
+.well(style="height: 250px; background-color: white;")
 
-	p Name: {{name}}
-
-	p Modes
-	button.btn.btn-default Chords
-	span.button.btn.btn-default Progression
-	span.button.btn.btn-default Intervals
-	br
+	.col-sm-6
+		h2 Chord Type
+		br
+		{{chordType}}
 
 
-	button.btn.btn-default Click me
+	.col-sm-6
+		
+		h2 Intervals
+		br
+		{{intervals}}
 
-	.well(style="height: 200px; border-radius:20px;")
 
-
+a.button.btn.btn-default(href='/view1', ng-click="generate()") Generate
 
