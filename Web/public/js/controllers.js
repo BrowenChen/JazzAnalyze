@@ -156,6 +156,7 @@ angular.module('myApp.controllers', []).
       this.modeList = modeOutputs
       this.keyList = keyOutputs
 
+      this.generateIntervals();
 
 
     }

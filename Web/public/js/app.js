@@ -11,6 +11,10 @@ angular.module('myApp', [
 config(function ($routeProvider, $locationProvider) {
   $routeProvider.
 
+    when('/generator', {
+      templateUrl: 'partials/generator',
+      controller: 'MyCtrl1'
+    }).
     when('/view1', {
       templateUrl: 'partials/partial1',
       controller: 'MyCtrl1'
@@ -24,7 +28,7 @@ config(function ($routeProvider, $locationProvider) {
       controller: 'MyCtrl1'
     }).
     otherwise({
-      redirectTo: '/view1'
+      redirectTo: '/home'
     });
 
   $locationProvider.html5Mode(true);
