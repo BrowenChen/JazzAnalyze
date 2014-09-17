@@ -7,6 +7,7 @@ body {
   margin-bottom: 0px;
   padding: 0px;
   background-color: #ECF0F1;
+  
 
   font-family: 'Josefin Sans', sans-serif;
   
@@ -84,13 +85,23 @@ h1{
 }
 
 /*Intro*/
-#intro{
+#tempBack {
+
+  z-index:10;
+  background-image: url('/img/intro-bg.jpg');  
   width: 100%;
   height: 700px;
   margin: 0;
   padding: 0;
-  background-image: url('/img/background-banner.png');
-  
+}
+#intro{
+  z-index: 20
+  width: 100%;
+  height: 700px;
+  margin: 0;
+  padding: 0;
+  background-image: url('/img/intro-bg-glued.jpg');
+  background-size: cover;  
 }
 
 #subtext
@@ -109,6 +120,7 @@ h1{
   width: 80%;
   opacity: .9;
   margin: 0 auto;
+
 
 }
 
@@ -194,6 +206,9 @@ h1{
   height: 700px;
 }
 
+#team p{
+  font-size: 1.1em;
+}
 
 #team h2:before{
   
