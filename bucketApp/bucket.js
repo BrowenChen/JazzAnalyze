@@ -76,7 +76,13 @@ var neckPosition = function(){
 
 
 // Determines what kind of chord you can use over this measure
-var determineChord = function(){
+
+
+var determineChord = function(notes){
+
+	//Write a function to use note degrees to convert to a list of numbers. 
+	//Then the function should check which options contain those numbers
+	// Outputs the list of available choices for scales and chord types.
 
 	var chordTypes = {"Maj7": [1, 3, 5, 7],
                       "Min7": [1, 3.1, 5, 7.1],
@@ -102,7 +108,8 @@ var determineChord = function(){
 
 // var chord = generateChordType();
 // console.log(chord);
-console.log(determineChord());
+// console.log(determineChord());
+
 generateChordProgression();
 
 chordVoicings();
