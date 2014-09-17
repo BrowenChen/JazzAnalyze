@@ -98,17 +98,11 @@ html
 							.jumbotron(style="width: 75%; text-align: center; margin: 0 auto; border-radius: 5px; background-color:inherit;")
 
 
-								.well(style="height: 600px; border-radius:5px; box-shadow: 2px 2px 1px #888888;")
+								.well(style="height: 600px; border-radius:5px; box-shadow: 2px 2px 1px #888888; background-color: #F2F1EF;")
 
 									
 
 									//- h2(style="color: #3A539B") Directions
-
-									h3 1. Play the scale, arpeggiate the chord, and improvise a lick with the given intervals
-									h3 2. Play the lick over each chord of a chord progression
-									h3 3. Use the lick and transpose to different keys and modes to internalize the sounds
-
-
 									//- ul.nav.nav-pills
 									//-	li.active
 									//-		a(href='/view1') Scales
@@ -126,9 +120,10 @@ html
 									a.button.btn.btn-default(href='/view1', style="margin: 5px;") Scales 
 									a.span.button.btn.btn-default(href='/view2', style="margin: 5px;")  Chord Changes
 									a.span.button.btn.btn-default(href='/view3', style="margin: 5px;")  Transpose
-									
-
 									br
+									h3 1. Play the scale, arpeggiate the chord, and improvise a lick with the given intervals
+									h3 2. Play the lick over each chord of a chord progression
+									h3 3. Use the lick and transpose to different keys and modes to internalize the sounds									
 									br
 
 									
@@ -140,13 +135,41 @@ html
 							.jumbotron(style="width: 75%; text-align: center; margin: 0 auto; border-radius: 5px; background-color:inherit;")
 								
 
-								.well(style="height: 600px; border-radius:5px; box-shadow: 2px 2px 1px #888888;")
-									h3 Harmonic Analysis
+								.well(style="height: 600px; border-radius:5px; box-shadow: 2px 2px 1px #888888; background-color: #F2F1EF;")
+									h3(style="color: #3A539B;") Harmonic Analysis
+									p Input a group of notes and see which modes and chord types you can use over these tones
+									.input-group(style="margin: 0 auto;")
+										input.form-control(type='text', placeholder="e.g C Eb F A G#.. ")
+
+
+
+									br
+									.well(style="height: 300px;")
+										h3 Display
+
+										.col-sm-6
+											h5 Sample Chords
+											br
+											ul
+												li C Maj7
+												li C Maj13
+												li C Maj9
+												li C 6/9
+												
+										.col-sm-6
+											h5 Sample Modes
+											br
+											ul
+												li C Lydian 
+												li C Ionian
+
 
 						.row
 							.jumbotron(style="width: 75%; text-align: center; margin: 0 auto; border-radius: 5px; background-color:inherit;")
 
 								
+
+
 								.well(style="height: 600px; border-radius:5px; box-shadow: 2px 2px 1px #888888;")
 									h3 TEsting 
 							
