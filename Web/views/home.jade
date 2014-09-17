@@ -8,14 +8,12 @@ html
 		link(href='lib/bootstrap-css/css/bootstrap.css', rel='stylesheet')
 		link(href='lib/jquery-ui/themes/smoothness/jquery-ui.css', rel='stylesheet')
 		link(href='/css/style.css', rel='stylesheet')
-		link(href='/css/app.css', rel='stylesheet')
+		
 
 		link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
 		script(src='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
 
-
-
-
+		//- link(href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css')
 		link(href='/css/fancybox.css')
 		link(href='/css/font-awesome-ie7.css')
 		link(href='/css/icons-color.css')
@@ -24,32 +22,84 @@ html
 		link(href='/css/slider1.css')
 		link(href='/css/icons.css')
 		link(href='/css/social-icons.css')
-			
+
+
+		link(href='/css/slick.css', rel='stylesheet')
+		link(href='/css/app.css', rel='stylesheet')
+		link(href='/css/animate.css', rel='stylesheet')
+
+				
+
 	body
 
-		.container
+
+
+		.row(style="background-color: #2C3E50;")
+			
+			.navbar.navbar-inverse
+				.navbar-inner
+					a(style="position: absolute; left: 100px;")
+						img(src='/img/depth_circle.png', style="height: 45px; width: 45px; opacity: .8; border-radius: 15px; ")
+						span(style="font-weight:bold; color: silver; font-size: 1.8em; left 20%;")  Chordally
+					
+
+					
+					ul.nav
+						li.active
+							a(href='/home')
+								| Home
+								//- span start here
+						li
+							a(href='/view1')
+								| Practice
+								//- span our team
+						li
+							a(href='#')
+								| About Us
+															
+						li.dropdown
+							a.dropdown-toggle(href='#', data-toggle='dropdown')
+								| Resources
+								b.caret
+								
+							ul.dropdown-menu
+								li
+									a(href='social-icons.html') Lessons
+								li
+									a(href='icons.html') Articles
+						li
+							a(href='#')
+								| Contact
+																	
+
+
+
+		//- .container
 		
-			.row-fluid
+		//-	.row-fluid
 		
-				.navigation
-					.navbar.navbar-fixed-top
-						.navbar-inner
-							//- a.btn.btn-navbar.btnOverlay(data-toggle='collapse', data-target='.nav-collapse')
-							//-	| menu
-							.nav
-								ul.nav
-									li
-										a.home(href='/home') Home
-									li
-										a.services(href='/view1') Generator
-									li
-										a.pricing(href='#') Description
-									li
-										a.portfolio(href='#') Practice Resources
-									li
-										a.about(href='#') About Us
-									li
-										a.contact(href='#') Contact
+		//-		.navigation
+		//-			.navbar.navbar-fixed-top
+		//-				.navbar-inner
+		//-					//- a.btn.btn-navbar.btnOverlay(data-toggle='collapse', data-target='.nav-collapse')
+		//-					//-	| menu
+		//-					.nav
+		//-						ul.nav
+		//-							li
+		//-								a.home(href='/home') Home
+		//-							li
+		//-								a.services(href='/view1') Practice							
+		//-							li
+		//-								a.portfolio(href='/resources') Resources
+		//-							li
+		//-								a.about(href='#') About Us
+		//-							li
+		//-								a.contact(href='#') Contact
+		
+
+
+
+
 		//- .row
 		//-	nav.navbar.navbar-inverse(role='navigation', style="background-color: #2C3E50; height: 100px; margin: 0 auto;")
 		//-		.container(style="text-align:center;")
@@ -67,65 +117,148 @@ html
 		//-				ul.nav.navbar-nav		
 		
 
-		#intro.row(style="width: 100%;")
+		#intro(style="width: 100%;padding: 0px; margin:0px;")
+			.row
+				//- img(src='img/chordally_abstract_glow.png', style=" height: 35%; width: 35%; margin: 0 auto; opacity: .9;")
+				
+
+				
+				.col-sm-6.animated.fadeIn._1
+					img#hand(src='img/hand_phone.png', style="height: 100%; width: 97%; bottom: 0;")
+
+				
+				.col-sm-6.animated.fadeIn._2
+					br
+					br
+					br
+					br
+					br
+					br
+					br
+					br
+					
+					img#textHead(src='img/Chordally_text_web.png', style="height: 80%; width: 80%;")
+					h2#subtext Efficient jazz improvisation practice tools.
+					br
+					br
+					br
+					.tryButton(style=" margin-left: 33%;") Try me out
+
+				//- h4#subtext Chordally is an effective and efficient tool 
+				//- h4#subtext2 used to practice jazz improvization.
+					//- h1(style="text-align: center;") Chordally
+
+					//- h3 Efficient jazz improvisation practice tools
+
+					//- h5 Learn more
+					//- button.btn.btn-info 
+				
+				//- img(src='/img/chordally_abstract.png', style=" height: 60%; width: 60%; opacity: .7;")
+
+				
 			//- img(src='img/JazzBackground.jpg', style="width: 100%;")
 			//- .row
 				p Test		
 
 		
-		
-	
+		#imgSlider.single-item(style="width: 100%;margin: 0 auto; font-size: 150%; height: 600px; background-color: #D2D7D3;")
+			#slider1.div
+				br
+				br
+				br
+				img(src='img/landing-device_laptop.png', style="width: 80%; height: 80%;")
+				h1(style="font-size: 1.7em;position: absolute; left: 53%; top: 35%; color: black;") Your personalized, organized practice tutor
+				h2(style="position: absolute; left: 60%; top: 47%; color: black;") "Stop wasting time in the practice room!""
+			#slider2.div 
+				//- h1(style="font-size: 1.9em; position: absolute; left: 6%; top: 18%; color: black;") Practice on the go! 
+				br
+				
+				h1(style=" font-size: 1.7em;position: relative; text-align: center; color: black;") Cross Platform
+				h2(style=" position: relative; text-align: center; color: black;") "Take it on the go!"
+				
+				img(src='img/chordinate_trans.png', style="width: 80%; height: 80%; margin: 0 auto; ")
+				
 
-		#services.color.black
+
+
+						
+		
+
+
+		//- img(src='img/chordly.jpg', style="width: 100%; height: 100%;")
+
+		#services.color
 			.container
 				.wrapper.col-sm-12
 					#page-title
 						#page-title-inner
 							h2 
-								span Our Mission
+								span Purpose
 					.row
 						.col-sm-12
-							p	Jazz is a difficult language to master. Improvisation over changes requires a steep learning curve to master the fundamentals of jazz harmonic analysis and engraining the sounds in your head takes months or years of frustration before it becomes second nature. 
-							p
+							h1 Jazz improvisation is a difficult language to master. We aim to lower that learning curve.
+							//- p	Jazz is a difficult language to master. Improvisation over changes requires a steep learning curve to master the fundamentals of jazz harmonic analysis and engraining the sounds in your head takes months or years of frustration before it becomes second nature. 
+							p(style="font-size: 1.6em;")
 								| As passionate musicians ourselves, we understand the long process of acquiring this esoteric language and hope to create an efficient methodology and practice resource to speed up this process as much as possible. 
+						
 					.row
 						.col-sm-6
-							p Navigating through simple jazz tunes require a mix of theory, knowledge of how to apply your modes and chords, quick thinking, and an intuitive sense of jazz phrasing that comes through listening to the language. Each chord change in a tune brings about certain “target" chord tones that fit with that particular measure as well as notes to avoid, so simply playing licks in a single key throughout a tune most likely clash with the rest of the band. Knowing how to spot a chord, hear it in your head, and know how to target these key tones for each chord is essential to producing natural lines that sound like jazz. The beauty of it all is that this process becomes entirely subconscious for those who have reached a level of mastery through years dedicated and focused practice. Much like the process of riding a bike, your brain will create mental heuristics that will allow you to internalize each chord and free you from thinking during jazz improvisation, allowing greater expression and manipulation of the music to your own voice. 
+							p Navigating through simple jazz tunes require a mix of theory, knowledge of how to apply your modes and chords, quick thinking, and an intuitive sense of jazz phrasing. Each chord change in a tune brings about certain “target" chord tones that fit with that particular measure as well as notes to avoid, so simply playing licks in a single key throughout a tune will most likely clash with many chords. Knowing how to spot a chord, hear it in your head, and know how to target these key tones for each chord is essential to producing natural lines that sound like jazz. The beauty of it all is that this process becomes entirely subconscious for those who have reached a level of mastery through years dedicated and focused practice, allowing greater expression and manipulation of the music to your own voice. 
+							p(style="font-size: 175%; text-align: center;") Jazz is a numbers game. By thinking in intervals, we free ourselves from thinking in specific chord tones per key and we can begin to think in terms of numbers for each key, transposing on the fly.
+
 						.col-sm-6
-							p The core foundations every jazz musician must go through are these three simple steps. Know how to identify a chord and it’s relative mode, be able to arpeggiate the scale, and transpose licks to all of the keys. Jazz is a numbers game. By thinking in intervals, we free ourselves from thinking in specific chord tones per key and we can begin to think in terms of numbers for each key. A lick that targets the 3rd, 5th, 9th, and resolves on the 7th is much easier to transpose to a different key because of this abstraction. That is why we aim to focus our attention and practice towards taking different phrases and applying them into different scenarios to truly internalize each chord sound. 
+							//- p The foundations every jazz musician must go through are these three simple steps. Know how to identify a chord and it’s relative mode, be able to arpeggiate the scale, and transpose licks to all of the keys. Jazz is a numbers game. By thinking in intervals, we free ourselves from thinking in specific chord tones per key and we can begin to think in terms of numbers for each key, transposing on the fly.
+							//- p(style="text-align: center; font-size: 2em;") Foundations of a jazz musician:
+							br
+							br
+							.col-sm-4
+								img(src='/img/screen_2.png', style="height: 250px; width: 170px;")
+							.col-sm-8
+								
+								ul(style="color: #CC9900; font-size: 1.7em; line-height: 60px;")
+									li Identify a chord and relative mode
+									li Play, Arpeggiate, Intervals
+									li Transpose to all keys and modes
+									li Apply to tunes
+								br
+								br
+							
+								//- a.myButton(href="/view1") Start Here
+							
 
 
-		#image
-		img(src='img/chordly.jpg', style="width: 100%; height: 100%;")
+		//- #image
+		//- img(src='img/chordly.jpg', style="width: 100%; height: 100%;")
 
 
-		#hello(style="background-color: #DADFE1;")
-			.row
-				.col-sm-4
-					.icons-box
-						i.fa-icon-beaker
-						h3 Targeted Pratice 
-						p We focus on the essentials that every jazz musician must do in order to be able to freely express themselves on their instruments. Yes this may be the most laborious part, but having a strong foundation is the key to any success.
-				.col-sm-4
-					.icons-box
-						i.fa-icon-thumbs-up
-						h3 CrossPlatform
-						p | Alongside the web app, we have an android platform that delivers the same core features for musicians. iOS is in the works in the future.
-				.col-sm-4
-					.icons-box
-						i.fa-icon-heart-empty
-						h3 Personalized Progress
-						p Progress tracking and focusing on your weak points will maximize productivity in the woodshed and take out the random noodling most people do for "practice". (I'm a perfect example of this). Adaptive learning algorithms will speed up the process and allow you to quantify your improvisation practice.
+		//- #hello(style="background-color: #DADFE1;")
+		//-	.row
+		//-		.col-sm-4
+		//-			.icons-box
+		//-				i.fa-icon-beaker
+		//-				h3 Targeted Pratice 
+		//-				p We focus on the essentials that every jazz musician must do in order to be able to freely express themselves on their instruments. Yes this may be the most laborious part, but having a strong foundation is the key to any success.
+		//-		.col-sm-4
+		//-			.icons-box
+		//-				i.fa-icon-thumbs-up
+		//-				h3 CrossPlatform
+		//-				p | Alongside the web app, we have an android platform that delivers the same core features for musicians. iOS is in the works in the future.
+		//-		.col-sm-4
+		//-			.icons-box
+		//-				i.fa-icon-heart-empty
+		//-				h3 Personalized Progress
+		//-				p Progress tracking and focusing on your weak points will maximize productivity in the woodshed and take out the random noodling most people do for "practice". (I'm a perfect example of this). Adaptive learning algorithms will speed up the process and allow you to quantify your improvisation practice.
 
 
 
-		#team.color.white
+		#team.color.silver
 			.container
 				.wrapper.col-sm-12
 					#page-title
 						#page-title-inner
-							h2
-								span The team
+							h2(style="color: #6C7A89; text-align:center; font-size: 3em;")
+								span THE TEAM
+							h3(style=" text-align: center;") We are two jazz musicians who are pursuing computer science and cognitive science majors at UC Berkeley
 					.row
 						.col-sm-12
 							#team
@@ -137,10 +270,10 @@ html
 										.position Web Developer -
 											a(href="owenchen.me")  owenchen.me
 
-										p As computer science and cognitive science major at UC Berkeley, Owen finally found his niche that combined his love of music, books, and code. As a fusion guitarist, jazz drummer, cognitive technology enthusiastic, and interest in changing education with tech, he absolutely loves creating hacks to optimize little things in his life that relate to his interests.
+										p As computer science and cognitive science major at UC Berkeley, Owen finally found his niche that combined his three top passions. He's a fusion guitarist and jazz drummer, cognitive technology enthusiastic, and a bookworm hoping to change the way people learn with technology. 
 										p After experiencing the soul-sucking life of a traditional 9-5’er programming at a large financial company, he knew that life after college had to be more exciting that that. 
-										p His decision to jump into the startup scene under Techstar’s 3 month accelerator program was one that highly influenced his overall vision for the rest of his life. After successfully hustling his way into a batch of 11 highly motivated entrepreneurs in London, he learned the in’s and outs of the startup world, met interesting people from all walks of life that changed his life perspective tremendously, learned how to be homeless for a week and be content sleeping on makeshift beds around the office, and most importantly, that he craved the entrepreneurial spirit of chasing a wild dream with passion that supersedes the frugal lifestyle of an entrepreneur. 
-										p Adaptive learning algorithms have been a constant side project that he’s been working on for months, and jazz improvisation has been a huge frustrating aspect of his life for the amount of work put into it. This is where the idea for Chordinate really took off, as he finally took his old python scripts for jazz analysis and created this product with his roommate.
+										p His decision to jump into the startup scene under Techstar’s 3 month accelerator program was one that highly influenced his overall vision for the rest of his life. After successfully hustling his way into becoming an intern in a batch of 11 highly motivated entrepreneurs from around the world in London, he learned the in’s and outs of the startup world, met interesting people from all walks of life, learned how to be homeless for a week as well as being content  with sleeping on makeshift beds around the office, and  learned that he craved the entrepreneurial spirit of chasing a big dream with passion that supersedes the frugal lifestyle of a founder. 
+										p Adaptive learning algorithms have been a constant side project that he’s been working on for months, and jazz improvisation has been currently a huge frustration. This is where the idea for Chordally really took off, as he finally took his old python scripts for jazz analysis and created this product with his roommate. 
 
 										.social_profiles
 										ul.social-bookmarks
@@ -159,7 +292,11 @@ html
 										.position Mobile, Designer -
 											a(href='jessiesalas.com') jessiesalas.com
 										p
-											| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+											| With a history of deep interest in the design of media, Jessie switched his course of study at UC Berkeley from a media studies major to cognitive science after realizing that directly studying the mind is a more potent discipline for gathering insights about what characterizes effective design and communication. When this study was combined with the pursuit of a computer science degree, the implementation skills he acquired enabled him to act upon his ideas and make them into full products.
+
+										p As an avid musician, he enjoys writing for and performing with jazz-fusion groups around the bay area, and is always excited at an opportunity to combine his passion for music with his passions for coding and design, which is what makes Chordally an enthralling project for him.  
+										p He has deployed designs for numerous groups, companies, and other organizations, as well as for a set of self-motivated side projects, of which jazz-practice tools are members. Most relevantly, however, Jessie Salas also enjoys writing about himself in the 3rd person point of view.
+
 										.social_profiles
 										ul.social-bookmarks
 											li.facebook
@@ -178,13 +315,11 @@ html
 			.col-sm-6
 				h1 Chordinate
 
-				p We are two Computer Science and Cognitive Science students who are madly obsessed with Jazz.
+				p We are madly obsessed with Jazz.
 
 
 			.col-sm-3
 				p 
-
-
 	script(src='/js/lib/angular/angular.js')
 	script(src='/js/app.js')
 	script(src='/js/slider.js')    
@@ -223,6 +358,32 @@ html
 	script(type='text/javascript', src='js/jquery.flot.pie.min.js')
 	script(type='text/javascript', src='js/jquery.flot.stack.js')
 	script(type='text/javascript', src='js/jquery.flot.resize.min.js')
+
+
+
+	script(src='/js/slick.js', type='text/javascript')
+	script. 
+
+		$('.single-item').slick({
+
+			autoplay: true,
+			dots: true
+
+			});
+
+
+
+		$('.multiple-items').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 2,
+		arrows: true,
+		dots: true,
+
+		focusOnSelect: true
+		});
+
+
 
 	script.
 		$(function() {
@@ -291,5 +452,3 @@ html
 		Page.init();
 
 		});
-
-	

@@ -27,31 +27,40 @@ html
 			
 	body
 
+		.row(style="background-color: #2C3E50;")
+			
+			.navbar.navbar-inverse
+				.navbar-inner
 
+					
 
-		.container
-		
-			.row-fluid
-		
-				.navigation
-					.navbar.navbar-fixed-top
-						.navbar-inner
-							//- a.btn.btn-navbar.btnOverlay(data-toggle='collapse', data-target='.nav-collapse')
-							//-	| menu
-							.nav
-								ul.nav
-									li
-										a.home(href='/home') Home
-									li
-										a.services(href='/view1') Practice
-									li
-										a.pricing(href='#') Description
-									li
-										a.portfolio(href='#') Resources/Lessons
-									li
-										a.about(href='#') About Us
-									li
-										a.contact(href='#') Contact
+					ul.nav
+						li.active
+							a(href='/home')
+								| Home
+								//- span start here
+						li
+							a(href='/view1')
+								| Practice
+								//- span our team
+						li
+							a(href='#')
+								| About Us
+															
+						li.dropdown
+							a.dropdown-toggle(href='#', data-toggle='dropdown')
+								| Resources
+								b.caret
+								
+							ul.dropdown-menu
+								li
+									a(href='social-icons.html') Lessons
+								li
+									a(href='icons.html') Articles
+						li
+							a(href='#')
+								| Contact
+											
 		//- .row
 		//-	nav.navbar.navbar-inverse(role='navigation', style="background-color: #2C3E50; height: 100px; margin: 0 auto;")
 		//-		.container(style="text-align:center;")
@@ -71,13 +80,15 @@ html
 		
 
 
-		
+
+
+
 		#tool.color(ng-app="myApp", ng-controller='MyCtrl1')
 			.container
 				.wrapper.col-sm-12
 					#page-title
 						#page-title-inner
-							h1(style="color: #3A539B") Directions
+							h1(style="color: #3A539B; text-align: center; font-size: 3em;") Practice Hub
 
 						.row
 							.jumbotron(style="width: 75%; text-align: center; margin: 0 auto; border-radius: 5px; background-color:inherit;")
@@ -121,41 +132,62 @@ html
 									div(ng-view)
 
 
-		#services.color.black
-			.container
-				.wrapper.col-sm-12
-					#page-title
-						#page-title-inner
-							h2 
-								span Objectives
-					.row
-						.col-sm-12
-							p		
-							| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+						.row
+							.jumbotron(style="width: 75%; text-align: center; margin: 0 auto; border-radius: 5px; background-color:inherit;")
+								
 
-					.row
-						.col-sm-6
-							p		
-							| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-						.col-sm-6
-							p		
-							| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-					.row
-						.col-sm-4
-							.icons-box
-								i.fa-icon-beaker
-								h3 Jazz
-								p | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-						.col-sm-4
-							.icons-box
-								i.fa-icon-thumbs-up
-								h3 CrossPlatform
-								p | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-						.col-sm-4
-							.icons-box
-								i.fa-icon-heart-empty
-								h3 Progress
-								p | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+								.well(style="height: 600px; border-radius:5px; box-shadow: 2px 2px 1px #888888;")
+									h3 Harmonic Analysis
+
+									
+
+
+
+
+						.row
+							.jumbotron(style="width: 75%; text-align: center; margin: 0 auto; border-radius: 5px; background-color:inherit;")
+
+								
+								.well(style="height: 600px; border-radius:5px; box-shadow: 2px 2px 1px #888888;")
+									h3 TEsting 
+							
+									
+
+		//- #services.color.black
+		//-	.container
+		//-		.wrapper.col-sm-12
+		//-			#page-title
+		//-				#page-title-inner
+		//-					h2 
+		//-						span Objectives
+		//-			.row
+		//-				.col-sm-12
+		//-					p		
+		//-					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+		//-			.row
+		//-				.col-sm-6
+		//-					p		
+		//-					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+		//-				.col-sm-6
+		//-					p		
+		//-					| Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+		//-			.row
+		//-				.col-sm-4
+		//-					.icons-box
+		//-						i.fa-icon-beaker
+		//-						h3 Jazz
+		//-						p | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+		//-				.col-sm-4
+		//-					.icons-box
+		//-						i.fa-icon-thumbs-up
+		//-						h3 CrossPlatform
+		//-						p | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+		//-				.col-sm-4
+		//-					.icons-box
+		//-						i.fa-icon-heart-empty
+		//-						h3 Progress
+		//-						p | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 
 
 
