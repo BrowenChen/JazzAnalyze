@@ -60,8 +60,16 @@ app.use(function(err, req, res, next) {
  */
 
 // serve index and view partials
-app.get('/', routes.index);
+app.get('/', routes.home);
 app.get('/partials/:name', routes.partials);
+
+
+
+app.get('/home', routes.home);
+
+app.get('/app', routes.index);
+
+app.get('/resources', routes.resources);
 
 // JSON API
 app.get('/api/name', api.name);
