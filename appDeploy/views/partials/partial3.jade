@@ -1,0 +1,34 @@
+#generator.well(style="height: 250px; background-color: white;")
+
+
+	h3 Internalize
+
+	.col-sm-4
+		h4 Lick
+		br
+		{{intervals}}
+	.col-sm-4
+		h4 List of Modes
+		br
+
+		{{modeList}}
+		
+
+	.col-sm-4 
+		h4 List of Keys
+		br
+		
+		{{keyList}}
+
+
+
+	br
+
+
+	//- a.span.button.btn.btn-default(ng-click="rate()") 1
+	//- a.span.button.btn.btn-default(ng-click="rate()") 2
+	//- a.span.button.btn.btn-default(ng-click="rate()") 3
+	//- a.span.button.btn.btn-default(ng-click="rate()") 4
+
+a.button.btn.btn-default(ng-click="generateModes()") Generate exercise
+
