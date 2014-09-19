@@ -1,0 +1,274 @@
+doctype html
+
+html
+	head
+		title Chordally
+		link(href='css/bootstrap.css', rel='stylesheet', type='text/css')
+		
+		script(src='js/jquery.min.js')
+		
+		link(href='/css/style.css', rel='stylesheet', type='text/css')
+		
+		link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900', rel='stylesheet', type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300', rel='stylesheet', type='text/css')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		script(type='application/x-javascript').
+			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+		script(type='text/javascript', src='js/move-top.js')
+		script(type='text/javascript', src='js/easing.js')
+		script(type='text/javascript').
+			jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+			});
+		script(type='text/javascript', src='js/jquery.jscrollpane.min.js')
+		script#sourcecode(type='text/javascript').
+			$(function()
+			{
+			$('.scroll-pane').jScrollPane();
+			});
+	body
+	
+		.header
+			.container
+				.logo
+					a(href='index.html')
+						img(src='/img/logo.png', alt='')
+				.menu
+					ul.menu-top
+						li
+							a.play-icon.popup-with-zoom-anim(href='#small-dialog') Log In
+						li
+							a.play-icon.popup-with-zoom-anim(href='#small-dialog1') Sign up
+	
+					script(type='text/javascript', src='js/modernizr.custom.min.js')
+					link(href='css/popuo-box.css', rel='stylesheet', type='text/css', media='all')
+					script(src='js/jquery.magnific-popup.js', type='text/javascript')
+	
+					#small-dialog.mfp-hide
+						.login
+							h3 Log In
+							h4 Already a Member
+							input(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}")
+							input(type='password', value='Password', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Password';}")
+							input(type='submit', value='Login')
+					#small-dialog1.mfp-hide
+						.signup
+							h3 Sign Up
+							h4 Enter Your Details Here
+							input(type='text', value='First Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'First Name';}")
+							input(type='text', value='Second Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Second Name';}")
+							input.email(type='text', value='Enter Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Enter Email';}")
+							input(type='password', value='Password', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Password';}")
+							input(type='submit', value='SignUp')
+					script.
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+						type: 'inline',
+						fixedContentPos: false,
+						fixedBgPos: true,
+						overflowY: 'auto',
+						closeBtnInside: true,
+						preloader: false,
+						midClick: true,
+						removalDelay: 300,
+						mainClass: 'my-mfp-zoom-in'
+						});
+						});
+					a#activator.right_bt(href='#')
+						img(src='/img/nav.png', alt='')
+					#box.box
+						.box_content_center
+							.menu_box_list
+								ul
+									li
+										a.scroll(href='#home') Home
+									li.active
+										a.scroll(href='#about') PracticeHub
+									li
+										a.scroll(href='#contact') Contact
+							a#boxclose.boxclose
+								img(src='/img/close.png', alt='')
+					script(type='text/javascript', src='js/easing.js')
+					script(type='text/javascript').
+						var $ = jQuery.noConflict();
+						$(function() {
+						$('#activator').click(function(){
+						$('#box').animate({'top':'0px'},500);
+						});
+						$('#boxclose').click(function(){
+						$('#box').animate({'top':'-700px'},500);
+						});
+						});
+						$(document).ready(function(){
+						//Hide (Collapse) the toggle containers on load
+						$(".toggle_container").hide();
+						//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+						$(".trigger").click(function(){
+						$(this).toggleClass("active").next().slideToggle("slow");
+						return false; //Prevent the browser jump to the link anchor
+						});
+						});
+				.clearfix
+				.header-bottom
+					h1 Practice Better.
+					p Efficient jazz improvisation tools
+					a(href='#') Get Started
+		
+		
+		#about.aboutus
+			.container
+				.row.aboutus-row
+					.col-md-4.aboutus-row-column
+						i.icon1
+						h3 GET INSPIRED
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma.Aliquam erat volutpat.
+					.col-md-4.aboutus-row-column
+						i.icon2
+						h3 GET LOCATION
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma.Aliquam erat volutpat.
+					.col-md-4.aboutus-row-column
+						i.icon3
+						h3 GET SOCIAL
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma.Aliquam erat volutpat.
+					.clearfix
+
+		.interduce
+			.container
+				.row.interduce-row
+					.col-md-6.inter-row-column
+						h4
+							span INTRODUCING
+							|  THE COFFEAT APP
+						p
+							| Morbi eget posuere dolor. Pellentesque cursus aliquet aliquet. Aeneanet felis sit amet diam mollis ullamcorper. Nullam consequat sem a ante vest ibulum tristique. Suspendisse tristique lacus ac mattis porta.
+						p
+							| Vivamus ligula quam, vehicula non lacinia sed, faucibus sit amet libero. In libero dui, eleifend eu nisi id, egestas fringilla odio. In varius quam a massa hendrerit ullamcorper a eu justo. Suspendisse porta mattis convallis.Aenean tempus ligula ac odio rhoncus, quis aliquam dolor accumsan.
+						p
+							| Suspendisse aliquet felis consectetur libero congue, sed pulvinar diam malesuada. Duis vehicula a nibh id hendrerit. Donec sit amet ultricesante, a mattis massa.
+						ul.inter-duce
+							li
+								i.icon4
+							li
+								i.icon5
+					.col-md-6.inter-row-column2
+						img(src='/img/iphone.png', alt='')
+					.clearfix
+
+		.slider
+			.container
+				.slider-content
+					script(src='js/responsiveslides.min.js')
+					script.
+						// You can also use "$(window).load(function() {"
+						$(function () {
+						// Slideshow 4
+						$("#slider4").responsiveSlides({
+						auto: true,
+						pager: true,
+						nav: true,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () {
+						$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+						$('.events').append("<li>after event fired.</li>");
+						}
+						});
+						});
+					#top.callbacks_container
+						ul#slider4.rslides
+							li
+								.slider-top
+									img(src='/img/1.jpg', alt='')
+									p
+										| &quot;Si vous voulez mon avis concernant l&apos;extremite observee, il est necessaire d&apos;etudier la globalite des solutions de bon sens, parce que la nature a horreur du vide.&quot;
+									p.below -Salade de Banoui, Paris
+							li
+								.slider-top
+									img(src='/img/2.jpg', alt='')
+									p.second-slide
+										| &quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&quot;
+									p.below -Salade de Banoui, Paris
+							li
+								.slider-top
+									img(src='/img/3.jpg', alt='')
+									p
+										| &quot;Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto.&quot;
+									p.below -Salade de Banoui, Paris
+					.clearfix  
+		#contact.map
+			.container
+				.map-header
+					h3 around to me
+					.row.map-row
+						.col-md-5.map-row-column
+							iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11778.97050318469!2d-74.46277975000001!3d42.43321294999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dc388e4003409d%3A0x47c28e9729d1823b!2sMine+Kill+State+Park%2C+161+Mine+Kill+Rd%2C+North+Blenheim%2C+NY+12131%2C+USA!5e0!3m2!1sen!2sin!4v1409028580591', frameborder='0', style='border:0')
+						.col-md-7.map-row-column
+							section.sky-form
+								.row.row1.scroll-pane
+									.map-column
+										h4.map-column-head Coffee 1
+										h4.map-column-head-right 2.0 KM
+										.clearfix
+										p 161 Mine Kill Road, North Blenheim, NY 12131
+									.map-column
+										h4.map-column-head Coffee 2
+										h4.map-column-head-right 2.0 KM
+										.clearfix
+										p 161 Mine Kill Road, North Blenheim, NY 12131
+									.map-column
+										h4.map-column-head Coffee 3
+										h4.map-column-head-right 2.0 KM
+										.clearfix
+										p 161 Mine Kill Road, North Blenheim, NY 12131
+									.map-column
+										h4.map-column-head Coffee 4
+										h4.map-column-head-right 2.0 KM
+										.clearfix
+										p 161 Mine Kill Road, North Blenheim, NY 12131
+									.map-column
+										h4.map-column-head Coffee 5
+										h4.map-column-head-right 2.0 KM
+										.clearfix
+										p 161 Mine Kill Road, North Blenheim, NY 12131
+									.map-column
+										h4.map-column-head Coffee 6
+										h4.map-column-head-right 2.0 KM
+										.clearfix
+										p 161 Mine Kill Road, North Blenheim, NY 12131
+									.map-column
+										h4.map-column-head Coffee 7
+										h4.map-column-head-right 2.0 KM
+										.clearfix
+										p 161 Mine Kill Road, North Blenheim, NY 12131
+						.clearfix  
+		.footer
+			.container
+				.logo
+					a(href='index.html')
+						img.foot-img(src='/img/f_logo.png', alt='')
+				p.footer-head
+					| 2014 Template By 
+					a(href='http://w3layouts.com/') W3layouts
+				.clearfix
+			script(type='text/javascript').
+				$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+				*/
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				});
+			a#toTop(href='#', style='display: block;')
+				span#toTopHover(style='opacity: 1;')  

@@ -1,0 +1,340 @@
+doctype html
+
+html
+	head
+		title Chordally 
+		link(href='css/bootstrap.css', rel='stylesheet', type='text/css')
+		
+		script(src='js/jquery.min.js')
+		
+		link(href='css/style.css', rel='stylesheet', type='text/css')
+		
+		link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900', rel='stylesheet', type='text/css')
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300', rel='stylesheet', type='text/css')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		script(type='application/x-javascript').
+			addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+		script(type='text/javascript', src='js/move-top.js')
+		script(type='text/javascript', src='js/easing.js')
+		script(type='text/javascript').
+			jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+			});
+		script(type='text/javascript', src='js/jquery.jscrollpane.min.js')
+		script#sourcecode(type='text/javascript').
+			$(function()
+			{
+			$('.scroll-pane').jScrollPane();
+			});
+	body
+	
+		.header
+			.container
+				.logo
+					a(href='index.html')
+						img(src='/img/depth_circle_with_thing_not_cursive.png', alt='', style="height: 60px; width: 270px; opacity:.95; z-index:2;")
+				.menu(style="z-index: 102;")
+					ul.menu-top
+						li
+							a.play-icon.popup-with-zoom-anim(href='#small-dialog') PracticeHub
+						li
+							a(href='') Resources
+						li
+							a.play-icon.popup-with-zoom-anim(href='#small-dialog1') Sign Up
+					script(type='text/javascript', src='js/modernizr.custom.min.js')
+					link(href='css/popuo-box.css', rel='stylesheet', type='text/css', media='all')
+					script(src='js/jquery.magnific-popup.js', type='text/javascript')
+	
+					#small-dialog.mfp-hide
+						.login
+							h3 Log In
+							h4 Practice Hub is under construction! We'll notify you when it's released.
+							//- input(type='text', value='Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Email';}")
+							//- input(type='password', value='Password', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Password';}")
+							//- input(type='submit', value='Login')
+					#small-dialog1.mfp-hide
+						.signup
+							h3 Sign Up
+							h4 Get notified for our release!
+							input(type='text', value='First Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'First Name';}")
+							//- input(type='text', value='Second Name', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Second Name';}")
+							input.email(type='text', value='Enter Email', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Enter Email';}")
+							input(type='password', value='Password', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'Password';}")
+							input(type='submit', value='SignUp')
+					script.
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+						type: 'inline',
+						fixedContentPos: false,
+						fixedBgPos: true,
+						overflowY: 'auto',
+						closeBtnInside: true,
+						preloader: false,
+						midClick: true,
+						removalDelay: 300,
+						mainClass: 'my-mfp-zoom-in'
+						});
+						});
+					a#activator.right_bt(href='#')
+						img(src='/img/nav.png', alt='')
+					#box.box
+						.box_content_center
+							.menu_box_list
+								ul
+									li
+										a.scroll(href='#home') Home
+									li.active
+										a.scroll(href='#about') About Us
+									//- li
+										//- a.scroll(href='#contact') Contact
+							a#boxclose.boxclose
+								img(src='/img/close.png', alt='')
+					script(type='text/javascript', src='js/easing.js')
+					script(type='text/javascript').
+						var $ = jQuery.noConflict();
+						$(function() {
+						$('#activator').click(function(){
+						$('#box').animate({'top':'0px'},500);
+						});
+						$('#boxclose').click(function(){
+						$('#box').animate({'top':'-700px'},500);
+						});
+						});
+						$(document).ready(function(){
+						//Hide (Collapse) the toggle containers on load
+						$(".toggle_container").hide();
+						//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+						$(".trigger").click(function(){
+						$(this).toggleClass("active").next().slideToggle("slow");
+						return false; //Prevent the browser jump to the link anchor
+						});
+						});
+				.clearfix
+				.header-bottom
+					.col-sm-4
+					.col-sm-8
+						img(src='img/Chordally_text_web.png', style="width: 70%; height: 85%;")
+
+						p Efficient jazz improvisation tools
+						br
+						br
+
+						a(href='#', style="text-align:center; margin-right: 18%;") Get Started
+		.interduce
+			.container
+				.row.interduce-row
+					.col-md-8.inter-row-column
+						h4
+							span OUR VISION
+							//- |  THE COFFEAT APP
+						h2
+							| Jazz improvisation is a difficult language to master. We aim to lower that learning curve.
+						h3
+							| Jazz is a numbers game. By thinking in intervals, we free ourselves from thinking in specific chord tones per key and we can begin to think in terms of numbers for each key, transposing on the fly.
+						p
+							| As passionate musicians ourselves, we understand the long process of acquiring this esoteric language and hope to create an efficient methodology and practice resource to speed up this process as much as possible. 
+						p
+							| Navigating through simple jazz tunes require a mix of theory, knowledge of how to apply your modes and chords, quick thinking, and an intuitive sense of jazz phrasing. Each chord change in a tune brings about certain “target" chord tones that fit with that particular measure as well as notes to avoid, so simply playing licks in a single key throughout a tune will most likely clash with many chords. Knowing how to spot a chord, hear it in your head, and know how to target these key tones for each chord is essential to producing natural lines that sound like jazz. The beauty of it all is that this process becomes entirely subconscious for those who have reached a level of mastery through years dedicated and focused practice, allowing greater expression and manipulation of the music to your own voice. 
+						ul.inter-duce
+							li
+								i.icon4
+							li
+								i.icon5
+					.col-md-4.inter-row-column2
+						br
+						br
+						br
+						br
+						img(src='/img/screen_2.png', alt='', style="height: 55%; width: 80%; margin: 0 auto;")
+					.clearfix
+					br
+					br
+					br
+					br
+
+		.slider
+			.container
+				.slider-content
+					script(src='js/responsiveslides.min.js')
+					script.
+						// You can also use "$(window).load(function() {"
+						$(function () {
+						// Slideshow 4
+						$("#slider4").responsiveSlides({
+						auto: true,
+						pager: true,
+						nav: true,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () {
+						$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+						$('.events').append("<li>after event fired.</li>");
+						}
+						});
+						});
+					#top.callbacks_container 
+						ul#slider4.rslides
+							li
+								.slider-top
+									img(src='/img/screen_4.png', alt='', style="height: 2%; width: 9%;")
+									p
+										| &quot; Personalized progress tracking to identify weaknesses and critical points to target. Harmonic analysis tools to aid in theory as well. &quot;
+							li
+								.slider-top
+									img(src='/img/landing-device_laptop.png', alt='', style="height: 10%; width: 20%;")
+									p.second-slide
+										| &quot; Admin dashboard for organized practice routines. Fire it up and get to work!&quot;
+									//- p.below -Salade de Banoui, Paris
+
+							li
+								.slider-top
+									img(src='/img/chordinate_trans.png', alt='', style="height: 10%; width: 30%;")
+									p
+										| &quot;Cross Platform capatability. Current supports web and android versions so you can take it on the go!&quot;
+									//- p.below -Salade de Banoui, Paris
+						br
+						br									
+					.clearfix  
+		#about.aboutus
+			.container
+				.row.aboutus-row
+					h2(style="text-align: center;") ABOUT US
+					.col-md-6.aboutus-row-column
+						//- i.icon1
+						img.img-thumbnail.img-responsive(src="/img/me.JPG", style=" height: 125px; width: 110px; border-radius: 20px;")
+						br
+						br
+						h3 OWEN CHEN
+						p#subtitle Full-stack Web Dev - owenchen.me 
+						br
+
+
+
+						p As computer science and cognitive science major at UC Berkeley, Owen finally found his niche that combined his three top passions. He's a fusion guitarist and jazz drummer, cognitive technology enthusiastic, and a bookworm hoping to change the way people learn with technology. 
+						br
+						p After experiencing the soul-sucking life of a traditional 9-5’er programming at a large financial company, he knew that life after college had to be more exciting that that. 
+						br
+						p His decision to jump into the startup scene under Techstar’s 3 month accelerator program was one that highly influenced his overall vision for the rest of his life. After successfully hustling his way into becoming an intern in a batch of 11 highly motivated entrepreneurs from around the world in London, he learned the in’s and outs of the startup world, met interesting people from all walks of life, learned how to be homeless for a week as well as being content  with sleeping on makeshift beds around the office, and  learned that he craved the entrepreneurial spirit of chasing a big dream with passion that supersedes the frugal lifestyle of a founder. 
+						br
+						p Adaptive learning algorithms have been a constant side project that he’s been working on for months, and jazz improvisation has been currently a huge frustration. This is where the idea for Chordally really took off, as he finally took his old python scripts for jazz analysis and created this product with his roommate. 
+						br
+						br
+						.social_profiles
+						ul.social-bookmarks
+							li.facebook
+								a(href='') facebook
+							li.youtube
+								a(href='') youtube
+							li.linkedin
+								a(href='#') linkedin
+							li.twitter
+								a(href='#') twitter		
+
+
+					.col-md-6.aboutus-row-column
+						//- i.icon2
+						img.img-thumbnail.img-responsive(src="/img/Jessie.jpg", style=" height: 125px; width: 115px; border-radius: 20px;")
+						br
+						br
+						h3 JESSIE SALAS
+						p#subtitle Designer, Mobile Dev - jessiesalas.com 
+						br
+
+						p
+							| With a history of deep interest in the design of media, Jessie switched his course of study at UC Berkeley from a media studies major to cognitive science after realizing that directly studying the mind is a more potent discipline for gathering insights about what characterizes effective design and communication. When this study was combined with the pursuit of a computer science degree, the implementation skills he acquired enabled him to act upon his ideas and make them into full products.
+						br
+						p As an avid musician, he enjoys writing for and performing with jazz-fusion groups around the bay area, and is always excited at an opportunity to combine his passion for music with his passions for coding and design, which is what makes Chordally an enthralling project for him.  
+						br
+						p He has deployed designs for numerous groups, companies, and other organizations, as well as for a set of self-motivated side projects, of which jazz-practice tools are members. Most relevantly, however, Jessie Salas also enjoys writing about himself in the 3rd person point of view.
+						br
+						br
+						.social_profiles
+						ul.social-bookmarks(style="text-align: center;")
+							li.facebook
+								a(href='') facebook
+							li.youtube
+								a(href='') youtube
+							li.linkedin
+								a(href='#') linkedin
+							li.twitter
+								a(href='#') twitter		
+
+
+
+
+					.clearfix
+
+		//- #contact.map
+		//-	.container
+		//-		.map-header
+		//-			h3 around to me
+		//-			.row.map-row
+		//-				.col-md-5.map-row-column
+		//-					iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11778.97050318469!2d-74.46277975000001!3d42.43321294999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dc388e4003409d%3A0x47c28e9729d1823b!2sMine+Kill+State+Park%2C+161+Mine+Kill+Rd%2C+North+Blenheim%2C+NY+12131%2C+USA!5e0!3m2!1sen!2sin!4v1409028580591', frameborder='0', style='border:0')
+		//-				.col-md-7.map-row-column
+		//-					section.sky-form
+		//-						.row.row1.scroll-pane
+		//-							.map-column
+		//-								h4.map-column-head Coffee 1
+		//-								h4.map-column-head-right 2.0 KM
+		//-								.clearfix
+		//-								p 161 Mine Kill Road, North Blenheim, NY 12131
+		//-							.map-column
+		//-								h4.map-column-head Coffee 2
+		//-								h4.map-column-head-right 2.0 KM
+		//-								.clearfix
+		//-								p 161 Mine Kill Road, North Blenheim, NY 12131
+		//-							.map-column
+		//-								h4.map-column-head Coffee 3
+		//-								h4.map-column-head-right 2.0 KM
+		//-								.clearfix
+		//-								p 161 Mine Kill Road, North Blenheim, NY 12131
+		//-							.map-column
+		//-								h4.map-column-head Coffee 4
+		//-								h4.map-column-head-right 2.0 KM
+		//-								.clearfix
+		//-								p 161 Mine Kill Road, North Blenheim, NY 12131
+		//-							.map-column
+		//-								h4.map-column-head Coffee 5
+		//-								h4.map-column-head-right 2.0 KM
+		//-								.clearfix
+		//-								p 161 Mine Kill Road, North Blenheim, NY 12131
+		//-							.map-column
+		//-								h4.map-column-head Coffee 6
+		//-								h4.map-column-head-right 2.0 KM
+		//-								.clearfix
+		//-								p 161 Mine Kill Road, North Blenheim, NY 12131
+		//-							.map-column
+		//-								h4.map-column-head Coffee 7
+		//-								h4.map-column-head-right 2.0 KM
+		//-								.clearfix
+		//-								p 161 Mine Kill Road, North Blenheim, NY 12131
+		//-				.clearfix  
+		.footer
+			.container
+				.logo
+					a(href='index.html')
+						//- img.foot-img(src='/img/depth_circle.png', alt='', style=" height: 75px; width: 75px;")
+				p.footer-head
+					| We are two CompSci and CogSci Berkeley students who are obsessed with 
+					a(href='') Jazz
+				.clearfix
+			script(type='text/javascript').
+				$(document).ready(function() {
+				/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+				*/
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				});
+			a#toTop(href='#', style='display: block;')
+				span#toTopHover(style='opacity: 1;')  
