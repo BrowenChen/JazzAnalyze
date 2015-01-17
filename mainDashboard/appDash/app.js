@@ -8,10 +8,20 @@ var express = require('express'),
   methodOverride = require('method-override'),
   errorHandler = require('error-handler'),
   morgan = require('morgan'),
-  routes = require('./routes'),
-  api = require('./routes/api'),
   http = require('http'),
   path = require('path');
+
+
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/news');
+require('./models/Posts');
+require('./models/Comments');
+
+var routes = require('./routes'),
+  api = require('./routes/api'),
+  index = require('./routes/index')
+
 
 var app = module.exports = express();
 
@@ -62,6 +72,15 @@ app.use(function(err, req, res, next) {
 /**
  * Routes
  */
+
+
+// Posts API
+app.get('/posts', index.getPosts);
+app.post('/posts', index.post);
+
+app.param('post', index.preLoad);
+
+app.get('/posts/:post', index.getSinglePost);
 
 // serve index and view partials
 app.get('/', routes.index);
