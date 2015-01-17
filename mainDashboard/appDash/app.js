@@ -73,7 +73,6 @@ app.use(function(err, req, res, next) {
  * Routes
  */
 
-
 // Posts API
 app.get('/posts', index.getPosts);
 app.post('/posts', index.post);
@@ -81,6 +80,9 @@ app.post('/posts', index.post);
 app.param('post', index.preLoad);
 
 app.get('/posts/:post', index.getSinglePost);
+
+app.put('/posts/:post/upvote', index.upVote);
+app.put('/posts/:post/downvote', index.downVote);
 
 // serve index and view partials
 app.get('/', routes.index);

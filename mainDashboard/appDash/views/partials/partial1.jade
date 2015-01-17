@@ -8,11 +8,13 @@
 .row
 		.col-md-6.col-md-offset-3
 				.page-header
-						h1 Repertoire Tracker
+						h1 Tracker
 						p Charts ordered by weakness
 				
 				div(ng-repeat="post in posts | orderBy:'-upvotes'")
-					span.glyphicon.glyphicon-thumbs-up(ng-click='incrementUpvotes(post)')
+					span.glyphicon.glyphicon-thumbs-up(ng-click='incrementUpvotes(post)') 
+					span.glyphicon.glyphicon-thumbs-down(ng-click='decrementVotes(post)')	 
+
 					| {{post.upvotes}}
 					span(style='font-size:20px; margin-left:10px;')
 						a(ng-show='post.link', href='{{post.link}}')

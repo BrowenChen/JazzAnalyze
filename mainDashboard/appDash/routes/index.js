@@ -53,3 +53,18 @@ exports.preLoad = function(req, res, next, id){
 exports.getSinglePost = function(req, res){
 	res.json(req.post)
 };
+
+exports.upVote = function(req, res){
+	req.post.upvote(function(err, post){
+		if (err) {return next(err); }
+		res.json(post);
+	});
+};
+
+exports.downVote = function(req, res){
+	req.post.downvote(function(err, post){
+		if (err) {return next(err); }
+		res.json(post);
+	});
+};
+
