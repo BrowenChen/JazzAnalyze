@@ -64,13 +64,23 @@ angular.module('myApp.controllers', []).
     }
 
   }]).
-  controller('MyCtrl2', ['$scope', 'posts', function ($scope, posts) {
+  controller('MyCtrl2', ['$scope', 'analysis', function ($scope, analysis) {
     // write Ctrl here
-    $scope.posts = posts.posts;
 
-    $scope.alert = function(){
-      alert("hi")
-    }
+    $scope.chordTypes = analysis.types;
+    $scope.generatedChord = "";
+    $scope.chordProgression = "";
+    $scope.voicing = "";
+    $scope.determinedChord = "";
+
+    $scope.generateChord = function(){$scope.generatedChord = analysis.generateChordType();};
+
+    $scope.generateProgression = function(){$scope.chordProgression = analysis.generateChordProgression()};
+
+    $scope.generateVoicing = function(){$scope.voicing = analysis.chordVoicings();};
+
+    $scope.determineChord = function(notes){$scope.determinedChord = analysis.determineChord(notes);}
+
   }]).
 
   controller('MyCtrl3', ['$scope', 'posts', function ($scope, posts) {

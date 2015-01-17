@@ -78,7 +78,6 @@ app.get('/posts', index.getPosts);
 app.post('/posts', index.post);
 
 app.param('post', index.preLoad);
-
 app.get('/posts/:post', index.getSinglePost);
 
 app.put('/posts/:post/upvote', index.upVote);

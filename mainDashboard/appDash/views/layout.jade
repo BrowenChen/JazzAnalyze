@@ -17,7 +17,7 @@ html(ng-app="myApp", ng-controller='AppCtrl')
 			h2 Hello, Owen 
 			ul.menu
 				li
-					a(href='/view1') Repertoire
+					a(href='/view1') Tracker
 				li
 					a(href='/view2') Analysis 
 				li
@@ -26,8 +26,7 @@ html(ng-app="myApp", ng-controller='AppCtrl')
 
 		//- span
 			a(href='#/posts/{{$index}}') Comments
-
-
+			
 		script(type='text/ng-template', id='/posts').
 			<div class="page-header">
 				<h3>

@@ -1,4 +1,30 @@
-p This is the partial for view 2.
-p
-  | Showing of 'interpolate' filter:
-  | {{ 'Current version is v%VERSION%.' | interpolate }}
+p Harmonic Analysis
+//- div(ng-repeat="chord in chordTypes") {{chord}}
+form(ng-submit="determineChord(phrase)", style="width: 50%;")
+	h3 Input a phrase
+	.form-group
+		input.form-control(type='text', placeholder=" A, B, C..", ng-model="phrase")
+	button(type="submit") Analyze
+br
+h4 Result
+{{determinedChord}}
+
+br
+
+button(ng-click="generateChord()")
+br
+{{generatedChord}}
+
+br
+
+button(ng-click="generateProgression()")
+br
+{{chordProgression}}
+br
+
+button(ng-click="generateVoicing()")
+br	
+{{voicing}}
+
+
+
