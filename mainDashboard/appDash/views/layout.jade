@@ -1,0 +1,44 @@
+!!!
+html(ng-app="myApp", ng-controller='AppCtrl')
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Test
+		link(href='lib/bootstrap-css/css/bootstrap.css', rel='stylesheet')
+		link(href='lib/jquery-ui/themes/smoothness/jquery-ui.css', rel='stylesheet')
+		link(href='/css/app.css', rel='stylesheet')
+
+		link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', rel='stylesheet')			
+		style.
+			.glyphicon-thumbs-up { cursor:pointer }
+	body
+
+		div
+			h2 Hello, Owen 
+			ul.menu
+				li
+					a(href='/view1') Repertoire
+				li
+					a(href='/view2') Analysis 
+				li
+					a(href='/view2') Chord Scale					
+			div(ng-view)
+
+	script(src='/js/lib/angular/angular.js')
+	script(src='/js/app.js')
+	script(src='/js/slider.js')    
+	script(src='/js/services.js')
+	script(src='/js/controllers.js')
+	script(src='/js/filters.js')
+	script(src='/js/directives.js')
+
+
+	script(src='lib/jquery/dist/jquery.js')
+	script(src='lib/jquery-ui/ui/jquery-ui.js')
+	script(src='lib/lodash/dist/lodash.js')
+	script(src='lib/angular/angular.js')
+	script(src='lib/angular-resource/angular-resource.js')
+	script(src='lib/angular-route/angular-route.js')
+	script(src='lib/angular-bootstrap/ui-bootstrap-tpls.js')
+	script(src='lib/angular-ui-date/src/date.js')		
