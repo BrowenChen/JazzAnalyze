@@ -45,12 +45,14 @@ angular.module('myApp.controllers', []).
       $scope.link = '';
     }
 
-
-
     $scope.incrementUpvotes = function(post){
       post.upvotes += 1;
     }
 
+    //Delete a post 
+    $scope.deletePost = function(post){
+      var newPosts = $scope.posts.splice($scope.posts.indexOf(post), 1)  
+    }
 
   }).
   controller('MyCtrl2', function ($scope) {
