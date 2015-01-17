@@ -37,6 +37,7 @@ exports.post = function(req, res, next) {
 };
 
 //function queries postId in database. 
+
 exports.preLoad = function(req, res, next, id){
 	var query = Post.findById(id);
 	query.exec(function(err, post){
