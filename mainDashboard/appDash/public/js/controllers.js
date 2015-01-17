@@ -29,8 +29,6 @@ angular.module('myApp.controllers', []).
       {title: 'My Favorite Things', upvotes: 1}
     ]
 
-
-
     //Adding Posts
     $scope.addPost = function(){
       if(!$scope.title || $scope.title === '') { return; }
@@ -38,7 +36,12 @@ angular.module('myApp.controllers', []).
       $scope.posts.push({
         title: $scope.title, 
         link: $scope.link,         
-        upvotes:0
+        upvotes:0,
+
+        comments: [
+          {author: 'Joe', body: 'Cool post!', upvotes: 0},
+          {author: 'Bob', body: 'Great idea but everything is wrong!', upvotes: 0}
+        ]        
       });
       
       $scope.title = '';
@@ -49,13 +52,47 @@ angular.module('myApp.controllers', []).
       post.upvotes += 1;
     }
 
-    //Delete a post 
+    //Delete a
     $scope.deletePost = function(post){
       var newPosts = $scope.posts.splice($scope.posts.indexOf(post), 1)  
     }
 
   }).
-  controller('MyCtrl2', function ($scope) {
+  controller('MyCtrl2', ['$scope', 'posts', function ($scope, posts) {
     // write Ctrl here
+    $scope.posts = posts.posts;
 
-  });
+    $scope.alert = function(){
+      alert("hi")
+    }
+  }]).
+
+  controller('MyCtrl3', ['$scope', 'posts', function ($scope, posts) {
+    // write Ctrl here
+    $scope.posts = posts.posts;
+
+    $scope.alert = function(){
+      alert($scope.posts)
+    }
+
+  }]).
+
+
+
+  controller('PostsCtrl', ['$scope', '$stateParams', 'posts', function ($scope, $stateParams, posts) {
+    // Controller for posts 
+    $scope.post = posts.posts[$stateParams.id];
+
+    $scope.addComment = function(){
+      if($scope.body === '') { return; }
+      $scope.post.comments.push({
+        body: $scope.body,
+        author: 'user',
+        upvotes: 0
+      });
+      $scope.body = '';
+
+
+      
+    }
+  }]);

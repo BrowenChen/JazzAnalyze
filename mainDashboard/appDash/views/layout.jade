@@ -16,14 +16,47 @@ html(ng-app="myApp", ng-controller='AppCtrl')
 
 		div
 			h2 Hello, Owen 
+
 			ul.menu
 				li
 					a(href='/view1') Repertoire
 				li
 					a(href='/view2') Analysis 
 				li
-					a(href='/view2') Chord Scale					
+					a(href='/view3') Chord Scale					
 			div(ng-view)
+
+		//- span
+			a(href='#/posts/{{$index}}') Comments
+
+
+		script(type='text/ng-template', id='/posts').
+			<div class="page-header">
+				<h3>
+					<a ng-show="post.link" href="{{post.link}}">
+					{{post.title}}
+					</a>
+					<span ng-hide="post.link">
+					{{post.title}}
+					</span>
+				</h3>
+			</div>
+			<div ng-repeat="comment in post.comments | orderBy:'-upvotes'">
+				<span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(comment)"></span>
+				{{comment.upvotes}} - by {{comment.author}}
+				<span style="font-size:20px; margin-left:10px;">
+				{{comment.body}}
+				</span>
+			</div>
+			
+			<form ng-submit="addComment()" style="margin-top:30px;">
+			<h3>Add a new comment</h3>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Comment" ng-model="body"></input>
+			</div>
+			<button type="submit" class="btn btn-primary">Post</button>
+			</form>			
+
 
 	script(src='/js/lib/angular/angular.js')
 	script(src='/js/app.js')
@@ -32,6 +65,10 @@ html(ng-app="myApp", ng-controller='AppCtrl')
 	script(src='/js/controllers.js')
 	script(src='/js/filters.js')
 	script(src='/js/directives.js')
+	script(src='/js/factories.js')		
+	script(src='//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js')
+
+	
 
 
 	script(src='lib/jquery/dist/jquery.js')
