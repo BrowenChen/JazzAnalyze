@@ -50,7 +50,7 @@ angular.module('myApp.controllers', []).
       });
       $scope.title = '';
       $scope.link = '';
-      alert("added post");
+
     }
     $scope.incrementUpvotes = function(post){
       post.upvotes += 1;
@@ -66,15 +66,13 @@ angular.module('myApp.controllers', []).
   }]).
   controller('MyCtrl2', ['$scope', 'analysis', function ($scope, analysis) {
     // write Ctrl here
-
     $scope.chordTypes = analysis.types;
     $scope.generatedChord = "";
     $scope.chordProgression = "";
     $scope.voicing = "";
     $scope.determinedChord = "";
-
+    
     $scope.generateChord = function(){$scope.generatedChord = analysis.generateChordType();};
-
     $scope.generateProgression = function(){$scope.chordProgression = analysis.generateChordProgression()};
 
     $scope.generateVoicing = function(){$scope.voicing = analysis.chordVoicings();};
@@ -94,9 +92,11 @@ angular.module('myApp.controllers', []).
 
   }]).
 
-  controller('PostsCtrl', ['$scope', '$stateParams', 'posts', function ($scope, $stateParams, posts) {
+  controller('PostsCtrl', ['$scope', 'posts', function ($scope, posts) {
     // Controller for posts 
-    $scope.post = posts.posts[$stateParams.id];
+    //How do you do this without $stateParams?
+
+    $scope.post = posts.posts;
 
     $scope.addComment = function(){
       if($scope.body === '') { return; }
