@@ -35,15 +35,22 @@ Contains a queue to hold a list of standards or artists to transcribe and learn 
 To-dos
 
 -implement calendar d3 tracking so you can track your progress like github commits
+
 -Strava like functionality to create social environment for tracking
+
 -all the frontend ui
+
 -4th module theory page
 
 
 .Switch to persistent data instead of keeping it client side, and figure out $routeparams bug
+
 .Possibly migrate from ngRoute to ui-route
+
 .Make new mongoose database schemas
+
 .figure out the additional comments to write and store notes on each activity practiced
+
 .more sorting tools for first module with d3 and angular
 
 
