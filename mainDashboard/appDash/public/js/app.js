@@ -133,8 +133,6 @@ angular.module('myApp', [
       //     return posts.getAll();
       //   }]   
       // }
-
-
     }).
     when('/view2', {
       templateUrl: 'partials/partial2',
@@ -144,17 +142,17 @@ angular.module('myApp', [
       templateUrl: 'partials/partial3',
       controller: 'MyCtrl3'
     }).  
-    when('/posts', {
-      templateUrl: 'posts',
+    when('/viewposts', {
+      templateUrl: '/partials/posts',
       controller: 'PostsCtrl'
     }).       
-    when('/posts/{id}', {
-      templateUrl: 'posts',
+    when('/viewposts/:id', {
+      templateUrl: '/partials/posts',
       controller: 'PostsCtrl'
     }).        
 
     otherwise({
-      redirectTo: '/posts'
+      redirectTo: '/view1'
     });
 
   $locationProvider.html5Mode(true);
