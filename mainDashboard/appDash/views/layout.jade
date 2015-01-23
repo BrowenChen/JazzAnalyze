@@ -8,25 +8,127 @@ html(ng-app="myApp", ng-controller='AppCtrl')
 		link(href='lib/bootstrap-css/css/bootstrap.css', rel='stylesheet')
 		link(href='lib/jquery-ui/themes/smoothness/jquery-ui.css', rel='stylesheet')
 		link(href='/css/app.css', rel='stylesheet')
-
-		link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', rel='stylesheet')			
+		//- link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css', rel='stylesheet')          
 		style.
 			.glyphicon-thumbs-up { cursor:pointer }
 	body
-		div
-			h2 Hello, Owen 
-			ul.menu
-				li
-					a(href='/view1') Tracker
-				li
-					a(href='/view2') Analysis 
-				li
-					a(href='/view3') Chord Scale					
+		style
+			.nav{
+				position: relative;
+				border: 1px solid green;
+				background-color: #F2F2F2;
+				height: 70px;
+				
+
+			}
+
+			.nav h4{
+				text-align: left;
+				vertical-align: center;
+
+			}
+
+			#leftContainer{
+				width: 30%;
+				float: left;
+				border: 2px dotted black;
+			}
+
+			#midContainer{
+				width: 40%;
+				float: left;
+				border: 1px solid green;
+			}
+			#rightContainer{
+				width: 30%;
+				float: right;
+				border: 1px solid yellow;
+			}
+
+			#placeholderImg{
+				height: 230px;
+				width: 230px;
+				border: 1px solid green;
+				float: right;
+			}
+
+			#full-name{
+				float: right;
+			}
+
+			.nav #mainHeader{
+				width: 80%;
+				height: 100%;
+				background-color: #00204A;
+				
+				margin: 0 auto;
+			}
+			#mainHeader header{
+				vertical-align: top;
+				
+				height: 60%;
+
+			}
+
+			#mainHeader footer{
+				vertical-align: bottom; 
+			
+				height: 40%;
+				background-color: #204E6F;
+			}
+
+			section{
+				margin-top: 15px;
+				position: relative;
+				width: 80%;
+				margin: 0 auto;
+			}
+		.nav
+			
+			#mainHeader
+				header
+					p test
+				footer
+					p test
+
+
+		section 
+			div
+				h4 Hello, Owen 
+				ul.menu
+					li
+						a(href='/view1') Tracker
+					li
+						a(href='/view2') Analysis 
+					li
+						a(href='/view3') Chord Scale		
+			//- #leftContainer
+
+			//-	#placeholderImg Test
+
+			//-	#full-name Owen Chen
+			//-	#user-name
+
+
+
+
+
+										
+			//- #rightContainer         
+			//-	div
+			//-		h4 Hello, Owen 
+			//-		ul.menu
+			//-			li
+			//-				a(href='/view1') Tracker
+			//-			li
+			//-				a(href='/view2') Analysis 
+			//-			li
+			//-				a(href='/view3') Chord Scale                    
 			div(ng-view)
 
 		//- span
 			a(href='#/posts/{{$index}}') Comments
-			
+
 		script(type='text/ng-template', id='/posts').
 			<div class="page-header">
 				<h3>
@@ -52,7 +154,7 @@ html(ng-app="myApp", ng-controller='AppCtrl')
 				<input type="text" class="form-control" placeholder="Comment" ng-model="body"></input>
 			</div>
 			<button type="submit" class="btn btn-primary">Post</button>
-			</form>			
+			</form>         
 
 
 	script(src='/js/lib/angular/angular.js')
@@ -62,11 +164,9 @@ html(ng-app="myApp", ng-controller='AppCtrl')
 	script(src='/js/controllers.js')
 	script(src='/js/filters.js')
 	script(src='/js/directives.js')
-	script(src='/js/factories.js')		
+	script(src='/js/factories.js')      
 	script(src='//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js')
 	script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
-	
-
 
 	script(src='lib/jquery/dist/jquery.js')
 	script(src='lib/jquery-ui/ui/jquery-ui.js')
@@ -75,4 +175,4 @@ html(ng-app="myApp", ng-controller='AppCtrl')
 	script(src='lib/angular-resource/angular-resource.js')
 	script(src='lib/angular-route/angular-route.js')
 	script(src='lib/angular-bootstrap/ui-bootstrap-tpls.js')
-	script(src='lib/angular-ui-date/src/date.js')		
+	script(src='lib/angular-ui-date/src/date.js')       

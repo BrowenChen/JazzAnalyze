@@ -38,7 +38,7 @@ To-dos
 
 -Strava like functionality to create social environment for tracking
 
--all the frontend ui
+-all the frontend ui (CalCentral + Github Design)
 
 -4th module theory page
 
